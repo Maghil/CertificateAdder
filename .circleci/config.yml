@@ -1,6 +1,23 @@
-version: 2
+version: 2.1
 jobs:
-  build:
-    working_directory: ~/circleci-certificateAdder
+  build_test:         #seems like this is the name/label of the job
     docker:
       - image: circleci/python:3.8.3 
+    
+    steps :
+      - checkout      #essentialy a git clone
+      - run :         #the things that should be executed
+        name : Install Python Dependencies 
+        command : |
+          echo 'export PATH=~$PATH:~/.local.bin' >> $BASH_ENV && source $BASH_ENV
+          pip install --user -r requirements.txt
+      - store_test_results :
+        path : test-reports       #where it should be stored
+      - store_artifacts :
+        path : test-reports
+      
+workflows :
+  workflow_test :          #label/name
+  jobs :
+    - build_test
+      
