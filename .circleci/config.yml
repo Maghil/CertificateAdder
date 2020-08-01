@@ -1,9 +1,8 @@
 version: 2.1
 jobs:
-  build_test:         #seems like this is the name/label of the job
+  testing_job:         #seems like this is the name/label of the job
     docker:
       - image: circleci/python:3.8.3 
-    
     steps :
       - checkout      #essentialy a git clone
       - run :         #the things that should be executed
@@ -17,7 +16,7 @@ jobs:
         path : test-reports
       
 workflows :
-  workflow_test :          #label/name
+  testing_workflow :          #label/name
     jobs :
-      - build_test
+      - testing_job
       
