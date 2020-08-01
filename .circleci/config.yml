@@ -3,20 +3,20 @@ jobs:
   testing_job:         #seems like this is the name/label of the job
     docker:
       - image: circleci/python:3.8.3 
-    steps :
+    steps:
       - checkout      #essentialy a git clone
-      - run :         #the things that should be executed
-        name : Install Python Dependencies 
-        command : |
-          echo 'export PATH=~$PATH:~/.local.bin' >> $BASH_ENV && source $BASH_ENV
-          pip install --user -r requirements.txt
-      - store_test_results :
-        path : test-reports       #where it should be stored
-      - store_artifacts :
-        path : test-reports
+      - run:         #the things that should be executed
+          name: Install Python Dependencies 
+          command: |
+            echo 'export PATH=~$PATH:~/.local.bin' >> $BASH_ENV && source $BASH_ENV
+            pip install --user -r requirements.txt
+      - store_test_results:
+          path: test-reports       #where it should be stored
+      - store_artifacts:
+          path: test-reports
       
-workflows :
-  testing_workflow :          #label/name
-    jobs :
+workflows:
+  testing_workflow:          #label/name
+    jobs:
       - testing_job
       
