@@ -1,4 +1,8 @@
-# Goal :
+# Automated Certificate Updation
+
+[![Maghil](https://circleci.com/gh/Maghil/CertificateAdder.svg?style=shield)](https://circleci.com/gh/Maghil/CertificateAdder)
+
+### Goal :
 
 Create Certification automation framework that works on various platform
 
