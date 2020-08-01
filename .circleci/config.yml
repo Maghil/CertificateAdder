@@ -18,6 +18,6 @@ jobs:
       
 workflows :
   workflow_test :          #label/name
-  jobs :
-    - build_test
+    jobs :
+      - build_test
       
