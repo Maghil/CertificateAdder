@@ -1,12 +1,11 @@
 # Automated Certificate Updation
 
 [![Maghil](https://circleci.com/gh/Maghil/CertificateAdder.svg?style=shield)](https://circleci.com/gh/Maghil/CertificateAdder)
-
-### Goal :
+## Goal :
 
 Create Certification automation framework that works on various platform
 
-### Example : 
+## Example : 
 
 - Linkedin
 - Amcat
@@ -15,11 +14,11 @@ Create Certification automation framework that works on various platform
 - and other websites that allows certificate updation
 
 
-### Progress 
+## Progress 
 
 As of now works in linkedin
 
-### Tools
+## Tools
 
 - Python
 - Selenium
