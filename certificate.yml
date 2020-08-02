@@ -1,0 +1,13 @@
+cert1:                          #if you have more than once cert add them below
+  name : example
+  org : example
+  expire : false                #if true enter expire Year & Month
+  issueYear : 2020
+  issueMonth : 12               #1-12
+  expireYear : 
+  expireMonth :
+  lNumber : 1234
+  lUrl : https://www.google.com
+
+# cert2:
+#   .....
