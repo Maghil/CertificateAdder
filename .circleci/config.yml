@@ -13,7 +13,7 @@ jobs:
       - run:
           name: test yaml file
           command: |
-           Python checker.py
+           pipenv run python checker.py test
       - store_test_results:
           path: test-reports       #where it should be stored
       - store_artifacts:
