@@ -10,6 +10,10 @@ jobs:
           command: |
             echo 'export PATH=~$PATH:~/.local.bin' >> $BASH_ENV && source $BASH_ENV
             pip install --user -r requirements.txt
+      - run:
+          name: test yaml file
+          command: |
+           Python checker.py
       - store_test_results:
           path: test-reports       #where it should be stored
       - store_artifacts:

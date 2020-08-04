@@ -27,9 +27,10 @@ def executor():
         #API to add new certificate
         driver.get("https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name="+certificate["name"]+"&organizationName="+certificate["org"]+"&issueYear="+str(certificate["issueYear"])+"&issueMonth="+str(certificate["issueMonth"])+"&expirationYear="+str(certificate["expireYear"])+"&expirationMonth="+str(certificate["expireMonth"])+"&certUrl="+certificate["lUrl"]+"&certId="+str(certificate["lNumber"]))
 
-        time.sleep(5)
-        #certification will not expire checkbox
-        driver.find_element_by_xpath("//div[@class='mb3']//label").click()
+        if(not certificate["expire"]):
+            time.sleep(5)
+            #certification will not expire checkbox
+            driver.find_element_by_xpath("//div[@class='mb3']//label").click()
 
         time.sleep(5)
 

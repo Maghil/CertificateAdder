@@ -3,9 +3,15 @@
 import yaml
 
 def userData():
-    with open(r'user.yml') as file:
-        return(yaml.full_load(file))
+    try:
+        with open(r'user.yml') as file:
+            return(yaml.full_load(file))
+    except FileNotFoundError :
+        return False
 
 def certificate():
-    with open(r'certificate.yml') as file:
-        return(yaml.full_load(file))
+    try :
+        with open(r'certificate.yml') as file:
+            return(yaml.full_load(file))
+    except FileNotFoundError :
+        return False
