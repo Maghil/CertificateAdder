@@ -5,11 +5,11 @@ jobs:
       - image: circleci/python:3.8.3 
     steps:
       - checkout      #essentialy a git clone
-      - run:         #the things that should be executed
-          name: Install Python Dependencies 
-          command: |
-            echo 'export PATH=~$PATH:~/.local.bin' >> $BASH_ENV && source $BASH_ENV
-            pip install --user -r requirements.txt
+      # - run:         #the things that should be executed
+      #     name: Install Python Dependencies 
+      #     command: |
+      #       echo 'export PATH=~$PATH:~/.local.bin' >> $BASH_ENV && source $BASH_ENV
+      #       pip install --user -r requirements.txt
       - run:
           name: test yaml file
           command: |
